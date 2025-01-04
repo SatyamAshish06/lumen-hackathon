@@ -21,7 +21,7 @@ CREATE TABLE Suppliers (
 
 CREATE TABLE Transactions(
     Transactions_id PRIMARY KEY,
-    product_id NOT NULL,
+    product_id NOT NULL FOREIGN KEY,
     supplier_id NOT NULL,
     quantity VARCHAR(50)
 );
