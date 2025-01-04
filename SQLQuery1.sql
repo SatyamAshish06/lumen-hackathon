@@ -19,6 +19,13 @@ CREATE TABLE Suppliers (
     contact_info VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE Transactions(
+    Transactions_id PRIMARY KEY,
+    product_id NOT NULL,
+    supplier_id NOT NULL,
+    quantity VARCHAR(50)
+);
 
+    
 
 
