@@ -20,10 +20,12 @@ CREATE TABLE Suppliers (
 );
 
 CREATE TABLE Transactions(
-    Transactions_id PRIMARY KEY,
-    product_id NOT NULL FOREIGN KEY,
-    supplier_id NOT NULL,
-    quantity VARCHAR(50)
+    Transactions_id INT PRIMARY KEY,
+    product_id INT NOT NULL ,
+    supplier_id INT  NOT NULL,
+    quantity INT,
+    FOREIGN KEY (product_id) REFERENCES Products(product_id),
+    FOREIGN KEY (supplier_id) REFERENCES Suppliers(supplier_id)
 );
 
     
